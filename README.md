@@ -69,7 +69,7 @@ When the callback is fired, it will contain what specifically produced an error.
 ``` js
 var opts = {
   onlyif: 'test -d /etc/passwd',
-  notif: 'test -d /aoehsutoehnaueohs/fake/fake/fake',
+  notif: 'test -f /aoehsutoehnaueohs/fake/fake/fake',
   exec: 'echo "hello $USER you are in $PWD"'
 };
 
@@ -81,7 +81,7 @@ condexec(opts, function(err) {
 yields
 
 ```
-[notif] command `test -f /etc/passwd` returned with code 0
+[onlyif] command `test -d /etc/passwd` returned with code 1
 ```
 
 It tells you what command failed, in what clause, and with what code.
