@@ -11,8 +11,6 @@ Installation
 Usage
 -----
 
-### basic
-
 ``` js
 var condexec = require('condexec');
 
@@ -25,7 +23,7 @@ var opts = {
 
 condexec(opts, function(err) {
   console.log('done');
-}
+});
 ```
 
 yields
